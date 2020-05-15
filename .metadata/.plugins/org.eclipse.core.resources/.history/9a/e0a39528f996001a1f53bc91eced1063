@@ -1,0 +1,32 @@
+/*
+ * shape.c
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+#include"shape.h" /*include shape class interfaces*/
+#include"math.h"
+void rectangle_constructor(shape *me, int16_t x0, int16_t y0, uint16_t w0, uint16_t h0);
+{
+	me->=x0;
+	me->rect.y=y0;
+}
+void shape_move(shape *me,int16_t dx,int16_t dy)
+{
+	me->x+=dx;
+	me->y+=dy;
+}
+
+uint16_t shape_distanceFrom(shape const *const me,shape const*other)
+{
+	uint16_t distance=0;
+	int16_t dx= me->x - other->x;
+	int16_t dy= me->y - other->y;
+	if(dx<0)
+		dx=-dx;
+	if(dy<0)
+		dy=-dy;
+	distance=pow(dx,2)+pow(dy,2);
+	distance=sqrt(distance);
+	return distance;
+}

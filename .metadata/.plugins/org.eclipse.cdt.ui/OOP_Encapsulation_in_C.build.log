@@ -1,7 +1,1 @@
-23:47:02 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
-
-23:47:02 Build Finished (took 414ms)
-
+Info: Nothing to build for OOP_Encapsulation_in_C
