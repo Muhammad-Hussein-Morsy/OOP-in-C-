@@ -1,0 +1,17 @@
+/*
+ * main.c
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+#include<stdlib.h>
+
+#include"shape.h"
+int main()
+{
+shape	s2; /*automatic allocation*/
+shape 	*ps3=malloc(sizeof(shape)); /*dynamic  allocation*/
+
+return 0;
+}
+

@@ -1,0 +1,13 @@
+/*
+ * main.c
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+#include<stdlib.h>
+
+int main()
+{
+return 0;
+}
+

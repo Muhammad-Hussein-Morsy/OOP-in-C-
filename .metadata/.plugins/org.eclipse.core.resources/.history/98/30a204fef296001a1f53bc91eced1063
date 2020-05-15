@@ -1,0 +1,8 @@
+/*
+ * shape.c
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+#include"shape.h" /*include shape class interfaces*/
+

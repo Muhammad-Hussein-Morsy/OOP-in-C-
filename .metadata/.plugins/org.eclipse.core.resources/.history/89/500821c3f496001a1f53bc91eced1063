@@ -1,0 +1,19 @@
+/*
+ * main.c
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+#include<stdlib.h>
+
+#include"shape.h"
+shape s1; /* static allocation */
+int main()
+{
+
+shape	s2; /*automatic allocation*/
+shape 	*ps3=malloc(sizeof(shape)); /*dynamic  allocation*/
+shape_constructor(&s1,1,2);
+return 0;
+}
+

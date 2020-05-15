@@ -1,0 +1,18 @@
+/*
+ * shape.h
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+
+#ifndef SHAPE_H_
+#define SHAPE_H_
+
+#include <stdint.h>
+class shape
+{
+private:
+	int16_t x;
+};
+
+#endif /* SHAPE_H_ */

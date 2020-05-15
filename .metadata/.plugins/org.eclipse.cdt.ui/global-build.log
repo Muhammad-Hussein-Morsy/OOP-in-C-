@@ -1,0 +1,154 @@
+23:18:35 **** Rebuild of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+Info: Nothing to build for OOP_Encapsulation_in_C
+Info: Nothing to build for OOP_Encapsulation_in_C
+23:25:48 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+23:36:00 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+23:42:34 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:17:20: error: incompatible type for argument 1 of 'shape_constructor'
+  shape_constructor(s2,3,4);
+                    ^~
+In file included from ..\main.c:9:0:
+..\shape.h:21:6: note: expected 'shape * {aka struct <anonymous> *}' but argument is of type 'shape {aka struct <anonymous>}'
+ void shape_constructor(shape *me, int16_t x0, int16_t y0);
+      ^~~~~~~~~~~~~~~~~
+..\main.c:21:13: error: incompatible type for argument 1 of 'shape_move'
+  shape_move(s2,8,2);
+             ^~
+In file included from ..\main.c:9:0:
+..\shape.h:22:6: note: expected 'shape * {aka struct <anonymous> *}' but argument is of type 'shape {aka struct <anonymous>}'
+ void shape_move(shape *me,int16_t dx,int16_t dy);
+      ^~~~~~~~~~
+..\main.c:23:5: warning: implicit declaration of function 'Q_ASSERT' [-Wimplicit-function-declaration]
+     Q_ASSERT(Shape_distanceFrom(&s1, &s1) == 0U);
+     ^~~~~~~~
+..\main.c:23:14: warning: implicit declaration of function 'Shape_distanceFrom' [-Wimplicit-function-declaration]
+     Q_ASSERT(Shape_distanceFrom(&s1, &s1) == 0U);
+              ^~~~~~~~~~~~~~~~~~
+23:42:44 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:17:20: error: incompatible type for argument 1 of 'shape_constructor'
+  shape_constructor(s2,3,4);
+                    ^~
+In file included from ..\main.c:9:0:
+..\shape.h:21:6: note: expected 'shape * {aka struct <anonymous> *}' but argument is of type 'shape {aka struct <anonymous>}'
+ void shape_constructor(shape *me, int16_t x0, int16_t y0);
+      ^~~~~~~~~~~~~~~~~
+..\main.c:23:5: warning: implicit declaration of function 'Q_ASSERT' [-Wimplicit-function-declaration]
+     Q_ASSERT(Shape_distanceFrom(&s1, &s1) == 0U);
+     ^~~~~~~~
+..\main.c:23:14: warning: implicit declaration of function 'Shape_distanceFrom' [-Wimplicit-function-declaration]
+     Q_ASSERT(Shape_distanceFrom(&s1, &s1) == 0U);
+              ^~~~~~~~~~~~~~~~~~
+23:43:26 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:23:2: warning: implicit declaration of function 'Q_ASSERT' [-Wimplicit-function-declaration]
+  Q_ASSERT(Shape_distanceFrom(&s1, &s1) == 0U);
+  ^~~~~~~~
+..\main.c:23:11: warning: implicit declaration of function 'Shape_distanceFrom' [-Wimplicit-function-declaration]
+  Q_ASSERT(Shape_distanceFrom(&s1, &s1) == 0U);
+           ^~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+main.o: In function `main':
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:23: undefined reference to `Shape_distanceFrom'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:23: undefined reference to `Q_ASSERT'
+collect2.exe: error: ld returned 1 exit status
+23:43:36 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:23:2: warning: implicit declaration of function 'assert' [-Wimplicit-function-declaration]
+  assert(Shape_distanceFrom(&s1, &s1) == 0U);
+  ^~~~~~
+..\main.c:23:9: warning: implicit declaration of function 'Shape_distanceFrom' [-Wimplicit-function-declaration]
+  assert(Shape_distanceFrom(&s1, &s1) == 0U);
+         ^~~~~~~~~~~~~~~~~~
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+main.o: In function `main':
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:23: undefined reference to `Shape_distanceFrom'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:23: undefined reference to `assert'
+collect2.exe: error: ld returned 1 exit status
+23:43:52 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+In file included from ..\main.c:10:0:
+..\main.c: In function 'main':
+..\main.c:24:9: warning: implicit declaration of function 'Shape_distanceFrom' [-Wimplicit-function-declaration]
+  assert(Shape_distanceFrom(&s1, &s1) == 0U);
+         ^
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+main.o: In function `main':
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:24: undefined reference to `Shape_distanceFrom'
+collect2.exe: error: ld returned 1 exit status
+23:44:39 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+In file included from ..\main.c:10:0:
+..\main.c: In function 'main':
+..\main.c:24:9: warning: implicit declaration of function 'Shape_distanceFrom' [-Wimplicit-function-declaration]
+  assert(Shape_distanceFrom(&s1, &s1) == 0U);
+         ^
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+main.o: In function `main':
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:24: undefined reference to `Shape_distanceFrom'
+collect2.exe: error: ld returned 1 exit status
+23:45:02 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+main.o: In function `main':
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:24: undefined reference to `Shape_distanceFrom'
+collect2.exe: error: ld returned 1 exit status
+23:45:13 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+23:45:46 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c: In function 'main':
+..\main.c:25:5: warning: implicit declaration of function 'Q_ASSERT' [-Wimplicit-function-declaration]
+     Q_ASSERT(Shape_distanceFrom(&s1, &s2) ==
+     ^~~~~~~~
+..\main.c:25:14: warning: implicit declaration of function 'Shape_distanceFrom' [-Wimplicit-function-declaration]
+     Q_ASSERT(Shape_distanceFrom(&s1, &s2) ==
+              ^~~~~~~~~~~~~~~~~~
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+main.o: In function `main':
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:25: undefined reference to `Shape_distanceFrom'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:26: undefined reference to `Shape_distanceFrom'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:25: undefined reference to `Q_ASSERT'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:27: undefined reference to `Shape_distanceFrom'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:28: undefined reference to `Shape_distanceFrom'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:29: undefined reference to `Shape_distanceFrom'
+E:\Github\OOP in C\OOP_Encapsulation_in_C\Debug/../main.c:27: undefined reference to `Q_ASSERT'
+collect2.exe: error: ld returned 1 exit status
+23:46:00 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+23:46:24 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 
+Info: Nothing to build for OOP_Encapsulation_in_C
+23:47:02 **** Incremental Build of configuration Debug for project OOP_Encapsulation_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc -o OOP_Encapsulation_in_C.exe main.o shape.o 

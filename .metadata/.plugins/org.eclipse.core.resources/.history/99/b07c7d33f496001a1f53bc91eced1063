@@ -1,0 +1,15 @@
+/*
+ * main.c
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+#include<stdlib.h>
+
+#include"shape.h"
+int main()
+{
+shape	s2; automatic allocation
+return 0;
+}
+

@@ -1,0 +1,19 @@
+/*
+ * main.c
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+#include<stdlib.h>
+
+class shape
+{
+private:
+	int x;
+};
+int main()
+{
+
+return 0;
+}
+
