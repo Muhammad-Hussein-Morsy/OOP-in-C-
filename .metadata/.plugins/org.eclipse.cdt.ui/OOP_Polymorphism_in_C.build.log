@@ -1,0 +1,20 @@
+00:16:17 **** Incremental Build of configuration Debug for project OOP_Polymorphism_in_C ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
+In file included from ..\rectangle.h:11:0,
+                 from ..\rectangle.c:7:
+..\shape.h:16:22: error: expected ')' before 'const'
+  void (* draw)(shape const * const me);
+                      ^~~~~
+..\shape.h:18:26: error: expected ')' before 'const'
+  uint32_t (* area)(shape const * const me);
+                          ^~~~~
+..\shape.h:19:1: warning: no semicolon at end of struct or union
+ }shapetable;
+ ^
+..\shape.h:39:9: warning: extra tokens at end of #endif directive [-Wendif-labels]
+ #endif  SHAPE_H_
+         ^~~~~~~~
+
+00:16:18 Build Finished (took 132ms)
+

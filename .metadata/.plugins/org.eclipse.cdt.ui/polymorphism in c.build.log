@@ -1,0 +1,15 @@
+01:18:56 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polymorphism in c
+Invoking: Cross GCC Linker
+gcc  -o "polymorphism in c"  ./main.o ./rectangle.o ./shape.o   
+Finished building target: polymorphism in c
+ 
+
+01:18:56 Build Finished (took 429ms)
+

@@ -1,0 +1,35 @@
+/*
+ * shape.h
+ *
+ *  Created on: ???/???/????
+ *      Author: MuhammadHussein94
+ */
+
+#ifndef SHAPE_H_
+#define SHAPE_H_
+#include <stdint.h>
+
+/*shpape's struct attributes*/
+typedef struct
+{
+	struct shapetable const *vptr;
+	int16_t x;
+	int16_t y;
+}shape;
+
+/*struct have pointers to all virtual funtions */
+typedef struct
+{
+/* pointer to draw() method* > draw method signature/ */
+	void (* draw)(shape const * const me);
+	/* pointer to area() method> area method signature*/
+	uint32_t (* arae)(shape const * const me);
+}shapetable;
+#endif /* SHAPE_H_ */
+
+void shape_constructor(shape *me, int16_t x0, int16_t y0);
+void shape_move(shape *me,int16_t dx,int16_t dy);
+
+uint16_t shape_distanceFrom(shape const *const me,shape const*other);
+
+void shape_draw_vcall(shape const *const me);

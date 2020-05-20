@@ -1,0 +1,22 @@
+00:34:17 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
+In file included from ..\shape.c:7:0:
+..\shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+..\shape.c: In function 'shape_area_vcall':
+..\shape.c:37:17: error: 'const struct shapetable' has no member named 'area'
+  return me->vptr->area(me);
+                 ^~
+..\shape.c: In function 'shape_draw_vcall':
+..\shape.c:41:10: error: 'const struct shapetable' has no member named 'draw'
+  me->vptr->draw(me);
+          ^~
+..\shape.c: In function 'shape_area_vcall':
+..\shape.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+
+00:34:17 Build Finished (took 135ms)
+

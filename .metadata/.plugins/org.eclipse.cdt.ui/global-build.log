@@ -1,439 +1,225 @@
-00:25:33 **** Clean-only build of configuration Debug for project OOP_Inheritance_in_C ****
-rm -rf OOP_Inheritance_in_C.exe main.o rectangle.d main.d shape.o rectangle.o shape.d 
-00:25:36 **** Rebuild of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-Info: Nothing to build for OOP_Inheritance_in_C
-00:26:40 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-00:27:32 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-00:28:27 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-00:28:31 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-..\shape.c:9:24: error: unknown type name 'shape'
- void shape_constructor(shape *me, int16_t x0, int16_t y0)
-                        ^~~~~
-..\shape.c:9:35: error: unknown type name 'int16_t'
- void shape_constructor(shape *me, int16_t x0, int16_t y0)
-                                   ^~~~~~~
-..\shape.c:9:47: error: unknown type name 'int16_t'
- void shape_constructor(shape *me, int16_t x0, int16_t y0)
-                                               ^~~~~~~
-..\shape.c:14:17: error: unknown type name 'shape'
- void shape_move(shape *me,int16_t dx,int16_t dy)
-                 ^~~~~
-..\shape.c:14:27: error: unknown type name 'int16_t'
- void shape_move(shape *me,int16_t dx,int16_t dy)
-                           ^~~~~~~
-..\shape.c:14:38: error: unknown type name 'int16_t'
- void shape_move(shape *me,int16_t dx,int16_t dy)
-                                      ^~~~~~~
-..\shape.c:20:1: error: unknown type name 'uint16_t'
- uint16_t shape_distanceFrom(shape const *const me,shape const*other)
- ^~~~~~~~
-..\shape.c:20:35: error: expected ')' before 'const'
- uint16_t shape_distanceFrom(shape const *const me,shape const*other)
-                                   ^~~~~
-00:28:34 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-00:28:45 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-..\shape.c:13:2: error: conflicting types for 'shape'
- }shape;
-  ^~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:18:2: note: previous declaration of 'shape' was here
- }shape;
-  ^~~~~
-..\shape.c:14:6: error: conflicting types for 'shape_constructor'
- void shape_constructor(shape *me, int16_t x0, int16_t y0)
-      ^~~~~~~~~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:21:6: note: previous declaration of 'shape_constructor' was here
- void shape_constructor(shape *me, int16_t x0, int16_t y0);
-      ^~~~~~~~~~~~~~~~~
-..\shape.c:19:6: error: conflicting types for 'shape_move'
- void shape_move(shape *me,int16_t dx,int16_t dy)
-      ^~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:22:6: note: previous declaration of 'shape_move' was here
+00:28:35 **** Clean-only build of configuration Debug for project OOP_polymorphism ****
+Info: Configuration "Debug" uses tool-chain "Cygwin GCC" that is unsupported on this system, attempting to build anyway.
+make clean 
+rm -rf  ./main.o ./rectangle.o ./shape.o  ./main.d ./rectangle.d ./shape.d  OOP_polymorphism.exe
+ 
+00:28:37 **** Build of configuration Debug for project OOP_polymorphism ****
+Info: Configuration "Debug" uses tool-chain "Cygwin GCC" that is unsupported on this system, attempting to build anyway.
+make all 
+Building file: ../main.c
+Invoking: Cygwin C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from ../rectangle.h:11:0,
+                 from ../main.c:15:
+../shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+../main.c: In function 'main':
+../main.c:40:13: warning: passing argument 1 of 'shape_move' from incompatible pointer type [-Wincompatible-pointer-types]
+  shape_move(&r1,2,5);
+             ^
+In file included from ../rectangle.h:11:0,
+                 from ../main.c:15:
+../shape.h:32:6: note: expected 'shape * {aka struct <anonymous> *}' but argument is of type 'rectangle * {aka struct <anonymous> *}'
  void shape_move(shape *me,int16_t dx,int16_t dy);
       ^~~~~~~~~~
-..\shape.c:25:10: error: conflicting types for 'shape_distanceFrom'
- uint16_t shape_distanceFrom(shape const *const me,shape const*other)
-          ^~~~~~~~~~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:24:10: note: previous declaration of 'shape_distanceFrom' was here
- uint16_t shape_distanceFrom(shape const *const me,shape const*other);
-          ^~~~~~~~~~~~~~~~~~
-00:29:36 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-..\shape.c:13:2: error: conflicting types for 'shape'
- }shape;
-  ^~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:18:2: note: previous declaration of 'shape' was here
- }shape;
-  ^~~~~
-..\shape.c:14:6: error: conflicting types for 'shape_constructor'
- void shape_constructor(shape *me, int16_t x0, int16_t y0)
-      ^~~~~~~~~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:21:6: note: previous declaration of 'shape_constructor' was here
- void shape_constructor(shape *me, int16_t x0, int16_t y0);
-      ^~~~~~~~~~~~~~~~~
-..\shape.c:19:6: error: conflicting types for 'shape_move'
- void shape_move(shape *me,int16_t dx,int16_t dy)
-      ^~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:22:6: note: previous declaration of 'shape_move' was here
+../main.c:21:11: warning: variable 'area' set but not used [-Wunused-but-set-variable]
+  uint32_t area;
+           ^~~~
+make: *** [main.o] Error 1
+00:29:10 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+In file included from ../rectangle.h:11:0,
+                 from ../main.c:15:
+../shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+../main.c: In function 'main':
+../main.c:40:13: warning: passing argument 1 of 'shape_move' from incompatible pointer type [-Wincompatible-pointer-types]
+  shape_move(&r1,2,5);
+             ^
+In file included from ../rectangle.h:11:0,
+                 from ../main.c:15:
+../shape.h:32:6: note: expected 'shape * {aka struct <anonymous> *}' but argument is of type 'rectangle * {aka struct <anonymous> *}'
  void shape_move(shape *me,int16_t dx,int16_t dy);
       ^~~~~~~~~~
-..\shape.c:25:10: error: conflicting types for 'shape_distanceFrom'
- uint16_t shape_distanceFrom(shape const *const me,shape const*other)
-          ^~~~~~~~~~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:24:10: note: previous declaration of 'shape_distanceFrom' was here
- uint16_t shape_distanceFrom(shape const *const me,shape const*other);
-          ^~~~~~~~~~~~~~~~~~
-00:29:39 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
+../main.c:21:11: warning: variable 'area' set but not used [-Wunused-but-set-variable]
+  uint32_t area;
+           ^~~~
+make: *** [main.o] Error 1
+00:29:21 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-..\shape.c:13:2: error: conflicting types for 'shape'
- }shape;
-  ^~~~~
 In file included from ..\shape.c:7:0:
-..\shape.h:18:2: note: previous declaration of 'shape' was here
- }shape;
-  ^~~~~
-..\shape.c:14:6: error: conflicting types for 'shape_constructor'
- void shape_constructor(shape *me, int16_t x0, int16_t y0)
-      ^~~~~~~~~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:21:6: note: previous declaration of 'shape_constructor' was here
- void shape_constructor(shape *me, int16_t x0, int16_t y0);
-      ^~~~~~~~~~~~~~~~~
-..\shape.c:19:6: error: conflicting types for 'shape_move'
- void shape_move(shape *me,int16_t dx,int16_t dy)
-      ^~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:22:6: note: previous declaration of 'shape_move' was here
- void shape_move(shape *me,int16_t dx,int16_t dy);
-      ^~~~~~~~~~
-..\shape.c:25:10: error: conflicting types for 'shape_distanceFrom'
- uint16_t shape_distanceFrom(shape const *const me,shape const*other)
-          ^~~~~~~~~~~~~~~~~~
-In file included from ..\shape.c:7:0:
-..\shape.h:24:10: note: previous declaration of 'shape_distanceFrom' was here
- uint16_t shape_distanceFrom(shape const *const me,shape const*other);
-          ^~~~~~~~~~~~~~~~~~
-00:29:53 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
+..\shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+..\shape.c: In function 'shape_area_vcall':
+..\shape.c:37:17: error: 'const struct shapetable' has no member named 'area'
+  return me->vptr->area(me);
+                 ^~
+..\shape.c: In function 'shape_draw_vcall':
+..\shape.c:42:10: error: 'const struct shapetable' has no member named 'draw'
+  me->vptr->draw(me);
+          ^~
+..\shape.c: In function 'shape_area_vcall':
+..\shape.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+00:29:32 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
+In file included from ..\rectangle.h:11:0,
+                 from ..\rectangle.c:7:
+..\shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+00:30:52 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
+In file included from ..\rectangle.h:11:0,
+                 from ..\rectangle.c:7:
+..\shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+00:30:57 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
+In file included from ..\rectangle.h:11:0,
+                 from ..\rectangle.c:7:
+..\shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+00:31:46 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
+In file included from ..\rectangle.h:11:0,
+                 from ..\rectangle.c:7:
+..\shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+00:34:17 **** Incremental Build of configuration Debug for project OOP_polymorphism ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-00:29:59 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-..\shape.c:10:31: warning: 'struct shape' declared inside parameter list will not be visible outside of this definition or declaration
- void shape_constructor(struct shape *me, int16_t x0, int16_t y0)
-                               ^~~~~
-..\shape.c:10:6: error: conflicting types for 'shape_constructor'
- void shape_constructor(struct shape *me, int16_t x0, int16_t y0)
-      ^~~~~~~~~~~~~~~~~
 In file included from ..\shape.c:7:0:
-..\shape.h:21:6: note: previous declaration of 'shape_constructor' was here
- void shape_constructor(shape *me, int16_t x0, int16_t y0);
-      ^~~~~~~~~~~~~~~~~
-..\shape.c: In function 'shape_constructor':
-..\shape.c:12:4: error: dereferencing pointer to incomplete type 'struct shape'
-  me->x=x0;
-    ^~
-00:30:02 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-00:30:50 **** Clean-only build of configuration Debug for project OOP_Inheritance_in_C ****
-rm -rf main.d shape.o OOP_Inheritance_in_C.exe main.o shape.d 
-00:31:00 **** Rebuild of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-Info: Nothing to build for OOP_Inheritance_in_C
-Info: Nothing to build for OOP_Inheritance_in_C
-Info: Nothing to build for OOP_Inheritance_in_C
-Info: Nothing to build for OOP_Inheritance_in_C
-00:31:24 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-main.o: In function `main':
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:17: undefined reference to `shape_constructor'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:18: undefined reference to `shape_constructor'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:19: undefined reference to `shape_constructor'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:21: undefined reference to `shape_move'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:22: undefined reference to `shape_move'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:23: undefined reference to `shape_move'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:24: undefined reference to `shape_distanceFrom'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:25: undefined reference to `shape_distanceFrom'
-E:\Github\OOP in C\OOP_Inheritance_in_C\Debug/../main.c:25: undefined reference to `shape_distanceFrom'
+..\shape.h:25:2: error: expected specifier-qualifier-list before '(' token
+  (void) (* draw)(shape const * const me);
+  ^
+..\shape.c: In function 'shape_area_vcall':
+..\shape.c:37:17: error: 'const struct shapetable' has no member named 'area'
+  return me->vptr->area(me);
+                 ^~
+..\shape.c: In function 'shape_draw_vcall':
+..\shape.c:41:10: error: 'const struct shapetable' has no member named 'draw'
+  me->vptr->draw(me);
+          ^~
+..\shape.c: In function 'shape_area_vcall':
+..\shape.c:38:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+01:17:32 **** Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../bsp.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"bsp.d" -MT"bsp.o" -o "bsp.o" "../bsp.c"
+../bsp.c:2:17: fatal error: qpc.h: No such file or directory
+ #include "qpc.h"
+                 ^
+compilation terminated.
+make: *** [bsp.o] Error 1
+01:17:47 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:1:17: fatal error: qpc.h: No such file or directory
+ #include "qpc.h"
+                 ^
+compilation terminated.
+make: *** [main.o] Error 1
+01:17:50 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:1:17: fatal error: qpc.h: No such file or directory
+ #include "qpc.h"
+                 ^
+compilation terminated.
+make: *** [main.o] Error 1
+01:18:06 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:1:17: fatal error: qpc.h: No such file or directory
+ #include "qpc.h"
+                 ^
+compilation terminated.
+make: *** [main.o] Error 1
+01:18:19 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:1:17: fatal error: qpc.h: No such file or directory
+ #include "qpc.h"
+                 ^
+compilation terminated.
+make: *** [main.o] Error 1
+01:18:24 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c:2:17: fatal error: bsp.h: No such file or directory
+ #include "bsp.h"
+                 ^
+compilation terminated.
+make: *** [main.o] Error 1
+01:18:27 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:37:5: warning: implicit declaration of function 'Q_ASSERT' [-Wimplicit-function-declaration]
+     Q_ASSERT(Shape_distanceFrom((Shape *)&r1, (Shape *)&r1) == 0U);
+     ^~~~~~~~
+Finished building: ../main.c
+ 
+Building file: ../rectangle.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"rectangle.d" -MT"rectangle.o" -o "rectangle.o" "../rectangle.c"
+Finished building: ../rectangle.c
+ 
+Building file: ../shape.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"shape.d" -MT"shape.o" -o "shape.o" "../shape.c"
+Finished building: ../shape.c
+ 
+Building target: polymorphism in c
+Invoking: Cross GCC Linker
+gcc  -o "polymorphism in c"  ./main.o ./rectangle.o ./shape.o   
+./main.o: In function `main':
+E:\Github\OOP in C\polymorphism in c\Debug/../main.c:37: undefined reference to `Q_ASSERT'
+E:\Github\OOP in C\polymorphism in c\Debug/../main.c:40: undefined reference to `Q_ASSERT'
+E:\Github\OOP in C\polymorphism in c\Debug/../main.c:41: undefined reference to `Q_ASSERT'
+E:\Github\OOP in C\polymorphism in c\Debug/../main.c:43: undefined reference to `Q_ASSERT'
 collect2.exe: error: ld returned 1 exit status
-00:31:35 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:15:8: warning: unused variable 's2' [-Wunused-variable]
-  shape s2; /*automatic allocation*/
-        ^~
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-00:31:52 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-Info: Nothing to build for OOP_Encapsulation_in_C
-00:32:46 **** Rebuild of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o shape.o 
-Info: Nothing to build for OOP_Encapsulation_in_C
-Info: Nothing to build for OOP_Inheritance_in_C
-00:33:17 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-In file included from ..\rectangle.h:12:0,
-                 from ..\rectangle.c:7:
-..\shape.h:21:24: error: unknown type name 'shape'
- void shape_constructor(shape *me, int16_t x0, int16_t y0);
-                        ^~~~~
-..\shape.h:22:17: error: unknown type name 'shape'
- void shape_move(shape *me,int16_t dx,int16_t dy);
-                 ^~~~~
-..\shape.h:24:35: error: expected ')' before 'const'
- uint16_t shape_distanceFrom(shape const *const me,shape const*other);
-                                   ^~~~~
-In file included from ..\rectangle.c:7:0:
-..\rectangle.h:16:2: error: unknown type name 'shape'
-  shape rect;   /*inherited shape*/
-  ^~~~~
-..\rectangle.c: In function 'rectangle_constructor':
-..\rectangle.c:12:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&me->rect,x0,y0);
-  ^~~~~~~~~~~~~~~~~
-00:33:57 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-In file included from ..\rectangle.h:12:0,
-                 from ..\rectangle.c:7:
-..\shape.h:21:24: error: unknown type name 'shape'
- void shape_constructor(shape *me, int16_t x0, int16_t y0);
-                        ^~~~~
-..\shape.h:22:17: error: unknown type name 'shape'
- void shape_move(shape *me,int16_t dx,int16_t dy);
-                 ^~~~~
-..\shape.h:24:35: error: expected ')' before 'const'
- uint16_t shape_distanceFrom(shape const *const me,shape const*other);
-                                   ^~~~~
-In file included from ..\rectangle.c:7:0:
-..\rectangle.h:16:2: error: unknown type name 'shape'
-  shape rect;   /*inherited shape*/
-  ^~~~~
-00:34:15 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-In file included from ..\rectangle.c:7:0:
-..\rectangle.h:16:2: error: unknown type name 'shape'
-  shape rect;   /*inherited shape*/
-  ^~~~~
-00:34:35 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:17:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:21:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:10:0:
-..\main.c:24:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-Info: Nothing to build for OOP_Inheritance_in_C
-00:34:59 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-In file included from ..\rectangle.c:7:0:
-..\rectangle.h:23:1: error: unknown type name 'me'
- me pointer as this pointer shall point to only the current used object of class and draw function shall not change the ojbect attributes
- ^~
-..\rectangle.h:23:12: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'as'
- me pointer as this pointer shall point to only the current used object of class and draw function shall not change the ojbect attributes
-            ^~
-..\rectangle.h:23:12: error: unknown type name 'as'
-00:35:04 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:35:11 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-..\rectangle.c: In function 'rectangle_constructor':
-..\rectangle.c:13:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&me->rect,x0,y0);
-  ^~~~~~~~~~~~~~~~~
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:37:10 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-In file included from ..\main.c:10:0:
-..\shape.h:20:2: error: conflicting types for 'shape'
- }shape;
-  ^~~~~
-In file included from ..\rectangle.h:12:0,
-                 from ..\main.c:9:
-..\shape.h:20:2: note: previous declaration of 'shape' was here
- }shape;
-  ^~~~~
-..\main.c: In function 'main':
-..\main.c:17:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:21:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:8:0:
-..\main.c:24:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-00:37:32 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:17:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:21:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:8:0:
-..\main.c:24:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:38:15 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-..\rectangle.c: In function 'rectangle_constructor':
-..\rectangle.c:13:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&me->rect,x0,y0);
-  ^~~~~~~~~~~~~~~~~
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:38:24 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o shape.o "..\\shape.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:17:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:21:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:8:0:
-..\main.c:24:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o rectangle.o "..\\rectangle.c" 
-..\rectangle.c: In function 'rectangle_constructor':
-..\rectangle.c:13:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&me->rect,x0,y0);
-  ^~~~~~~~~~~~~~~~~
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:38:34 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:17:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:21:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:8:0:
-..\main.c:24:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:41:14 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:19:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:24:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:8:0:
-..\main.c:27:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-..\main.c:31:11: warning: unused variable 'area' [-Wunused-variable]
-  uint32_t area=rectangle_area(&r1);
-           ^~~~
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:41:27 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:19:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:24:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:8:0:
-..\main.c:27:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-..\main.c:15:11: warning: variable 'area' set but not used [-Wunused-but-set-variable]
-  uint32_t area;
-           ^~~~
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
-00:48:04 **** Incremental Build of configuration Debug for project OOP_Inheritance_in_C ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
-..\main.c: In function 'main':
-..\main.c:19:2: warning: implicit declaration of function 'shape_constructor' [-Wimplicit-function-declaration]
-  shape_constructor(&s1,1,2);
-  ^~~~~~~~~~~~~~~~~
-..\main.c:24:2: warning: implicit declaration of function 'shape_move' [-Wimplicit-function-declaration]
-  shape_move(&s1,10,1);
-  ^~~~~~~~~~
-In file included from ..\main.c:8:0:
-..\main.c:27:9: warning: implicit declaration of function 'shape_distanceFrom' [-Wimplicit-function-declaration]
-  assert(shape_distanceFrom(&s1, &s2));
-         ^
-..\main.c:15:11: warning: variable 'area' set but not used [-Wunused-but-set-variable]
-  uint32_t area;
-           ^~~~
-gcc -o OOP_Inheritance_in_C.exe main.o rectangle.o shape.o 
+make: *** [polymorphism in c] Error 1
+01:18:56 **** Incremental Build of configuration Debug for project polymorphism in c ****
+make all 
+Building file: ../main.c
+Invoking: Cross GCC Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polymorphism in c
+Invoking: Cross GCC Linker
+gcc  -o "polymorphism in c"  ./main.o ./rectangle.o ./shape.o   
+Finished building target: polymorphism in c
+ 
